@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="degradado">
+    <ion-title>HP WORLD</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-item >
+    <ion-input [(ngModel)]="mdl_usuario"  label="Usuario" labelPlacement="floating" placeholder="Ingrese su usuario"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)]="mdl_contrasena" type="password" label="Contraseña" labelPlacement="floating" placeholder="Ingrese su contraseña"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="ingresar()" expand="block" class="degradado ion-margin-top boton"> Ingresar </ion-button>
+</ion-content>
