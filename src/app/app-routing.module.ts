@@ -22,7 +22,15 @@ const routes: Routes = [
   {
     path: 'harry-potter',
     loadChildren: () => import('./pages/harry-potter/harry-potter.module').then( m => m.HarryPotterPageModule)
+  },  {
+    path: 'tienda',
+    loadChildren: () => import('./pages/tienda/tienda.module').then( m => m.TiendaPageModule)
   },
+  {
+    path: 'carrito',
+    loadChildren: () => import('./pages/carrito/carrito.module').then( m => m.CarritoPageModule)
+  },
+
 ];
 
 @NgModule({
