@@ -18,4 +18,8 @@ export class PrincipalPage implements OnInit {
     this.router.navigate(['personajes']);
   }
 
+  tienda() {
+    this.router.navigate(['tienda']);
+  }
+
 }

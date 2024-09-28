@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-harry-potter',
   templateUrl: './harry-potter.page.html',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HarryPotterPage implements OnInit {
 
-  constructor() { }
+  
+
+  constructor() { 
+   
+    }
 
   ngOnInit() {
   }

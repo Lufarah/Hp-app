@@ -1,16 +1,15 @@
 <ion-header [translucent]="true">
-
   <ion-toolbar class="degradado">
     <ion-buttons slot="start">
-      <ion-menu-button name="star">⚯ ͛</ion-menu-button>
+      <ion-menu-button >⚯ ͛</ion-menu-button>
     </ion-buttons>
-    <ion-title>HP WORLD</ion-title>
+    <ion-searchbar placeholder="Buscar"></ion-searchbar>
+    <ion-title slot="start">HP WORLD</ion-title>
   </ion-toolbar>
-  <ion-searchbar></ion-searchbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-icon name="help-outline">hola</ion-icon>
+  
   
   <ion-card class="tamano">
     <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
@@ -57,7 +56,7 @@
   <ion-card class="tamano">
     <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
     <ion-card-header>
-      <ion-card-title>Tienda</ion-card-title>
+      <ion-button (click)="tienda()">Tienda</ion-button>
     </ion-card-header>
   </ion-card>
 </ion-content>

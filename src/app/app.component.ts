@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { addIcons } from 'ionicons';
+import { close,closeCircle, pin} from 'ionicons/icons';
 
 
 @Component({
@@ -7,5 +9,19 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+
+
+
+  constructor() {
+
+    
+    }
+
+
+  filtrarItems(event: any){
+
+    addIcons({ close, closeCircle, pin});
+
+
+  }
 }
