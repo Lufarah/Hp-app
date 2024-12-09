@@ -16,13 +16,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/principal/principal.module').then( m => m.PrincipalPageModule)
   },
   {
-    path: 'personajes',
-    loadChildren: () => import('./pages/personajes/personajes.module').then( m => m.PersonajesPageModule)
-  },
-  {
-    path: 'harry-potter',
-    loadChildren: () => import('./pages/harry-potter/harry-potter.module').then( m => m.HarryPotterPageModule)
-  },  {
     path: 'tienda',
     loadChildren: () => import('./pages/tienda/tienda.module').then( m => m.TiendaPageModule)
   },
@@ -30,6 +23,41 @@ const routes: Routes = [
     path: 'carrito',
     loadChildren: () => import('./pages/carrito/carrito.module').then( m => m.CarritoPageModule)
   },
+  {
+    path: 'crear-usuario',
+    loadChildren: () => import('./pages/crear-usuario/crear-usuario.module').then( m => m.CrearUsuarioPageModule)
+  },
+  {
+    path: 'cambiar-contrasena',
+    loadChildren: () => import('./pages/cambiar-contrasena/cambiar-contrasena.module').then( m => m.CambiarContrasenaPageModule)
+  },
+  {
+    path: 'student-list',
+    loadChildren: () => import('./pages/student-list/student-list.module').then( m => m.StudentListPageModule)
+  },
+  {
+    path: 'character-list',
+    loadChildren: () => import('./pages/character-list/character-list.module').then( m => m.CharacterListPageModule)
+  },  {
+    path: 'spell-list',
+    loadChildren: () => import('./pages/spell-list/spell-list.module').then( m => m.SpellListPageModule)
+  },
+  {
+    path: 'book-list',
+    loadChildren: () => import('./pages/book-list/book-list.module').then( m => m.BookListPageModule)
+  },
+  {
+    path: 'movie-list',
+    loadChildren: () => import('./pages/movie-list/movie-list.module').then( m => m.MovieListPageModule)
+  },
+  {
+    path: 'carrito',
+    loadChildren: () => import('./pages/carrito/carrito.module').then( m => m.CarritoPageModule)
+  },
+
+
+
+
 
 ];
 

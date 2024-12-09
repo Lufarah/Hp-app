@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="degradado">
+    <ion-buttons slot="start">
+      <ion-menu-button >⚯ ͛</ion-menu-button>
+    </ion-buttons>
+    <ion-title slot="start">HECHIZOS </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-spinner *ngIf="isLoading" name="crescent"></ion-spinner>
+
+  <ion-list *ngIf="!isLoading">
+    <ion-item *ngFor="let spell of spells">
+      <ion-label>
+        <h2>{{ spell.name }}</h2>
+        <p>{{ spell.description }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="!isLoading && spells.length === 0">
+    <p>No hay hechizos disponibles.</p>
+  </div>
+</ion-content>

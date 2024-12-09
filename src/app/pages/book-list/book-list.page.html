@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="degradado">
+    <ion-buttons slot="start">
+      <ion-menu-button >⚯ ͛</ion-menu-button>
+    </ion-buttons>
+    <ion-title slot="start">LIBROS </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Spinner mientras los datos se cargan -->
+  <ion-spinner *ngIf="isLoading" name="crescent"></ion-spinner>
+
+  <!-- Mostrar los libros cuando no esté cargando -->
+  <ion-list *ngIf="!isLoading">
+    <ion-item *ngFor="let book of books">
+      <ion-label>
+        <h2>{{ book.title }}</h2> <!-- Título del libro -->
+        <p><strong>Año de publicación:</strong> {{ book.releaseDate | date: 'yyyy' }}</p> <!-- Año de publicación -->
+        <p><strong>Autor:</strong> {{ book.author }}</p> <!-- Autor -->
+        <p><strong>Sinopsis:</strong> {{ book.plot }}</p> <!-- Sinopsis -->
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Mensaje cuando no hay libros -->
+  <div *ngIf="!isLoading && books.length === 0">
+    <p>No se encontraron libros.</p>
+  </div>
+</ion-content>

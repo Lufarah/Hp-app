@@ -3,13 +3,29 @@
     <ion-buttons slot="start">
       <ion-menu-button >⚯ ͛</ion-menu-button>
     </ion-buttons>
-    <ion-searchbar placeholder="Buscar"></ion-searchbar>
-    <ion-title slot="start">CARRITO</ion-title>
+    <ion-title slot="start">Carrito </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-    <ion-text color="tertiary">
-      <h3>Aca encontraras lo que agregues al carrito de compras para despues poder llevar a cabo la compra</h3>
-    </ion-text>
+<ion-content>
+  <ion-list *ngIf="items.length > 0; else emptyCart">
+    <ion-item *ngFor="let item of items; let i = index">
+      <ion-label>
+        <h2>{{ item.name }}</h2>
+        <p>${{ item.price }}</p>
+      </ion-label>
+      <ion-button color="danger" (click)="removeItem(i)">
+        Eliminar
+      </ion-button>
+    </ion-item>
+    <ion-button expand="full" color="secondary" (click)="clearCart()">
+      Vaciar Carrito
+    </ion-button>
+  </ion-list>
+
+  <ng-template #emptyCart>
+    <ion-label>
+      <h2>Tu carrito está vacío</h2>
+    </ion-label>
+  </ng-template>
 </ion-content>

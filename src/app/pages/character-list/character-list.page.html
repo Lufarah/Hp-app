@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="degradado">
+    <ion-buttons slot="start">
+      <ion-menu-button >⚯ ͛</ion-menu-button>
+    </ion-buttons>
+    <ion-title slot="start">PERSONAJES </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-spinner *ngIf="isLoading" name="crescent"></ion-spinner>
+
+  <ion-list *ngIf="!isLoading">
+    <ion-item *ngFor="let character of characters">
+      <ion-thumbnail slot="start" *ngIf="character.image">
+        <img [src]="character.image" [alt]="character.name">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ character.name }}</h2>
+        <p>Casa: {{ character.house || 'No especificada' }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="!isLoading && characters.length === 0">
+    <p>No hay personajes disponibles.</p>
+  </div>
+</ion-content>

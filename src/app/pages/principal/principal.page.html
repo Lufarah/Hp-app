@@ -3,58 +3,87 @@
     <ion-buttons slot="start">
       <ion-menu-button >⚯ ͛</ion-menu-button>
     </ion-buttons>
-    <ion-searchbar placeholder="Buscar"></ion-searchbar>
-    <ion-title slot="start">HP WORLD</ion-title>
+    <ion-title slot="start">HP WORLD </ion-title>
+    <ion-button (click)="navegarCambiarContrasena()"> 
+      <ion-icon name="create-outline" slot="end"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+      <ion-searchbar placeholder="Buscar" ></ion-searchbar>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="tamano">
+    <img 
+      alt="Lista de estudiantes" 
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4_C0z4xb40jfoQGsSvHR0HdBg8pUJ3f8QhA&s" 
+    />
+    <ion-card-header>
+      <ion-button (click)="irAListaEstudiantes()">
+        Ver Lista de Estudiantes
+      </ion-button>
+    </ion-card-header>
+  </ion-card>
+
+
+
+  <ion-card class="tamano">
+    <img 
+      alt="Lista de personajes" 
+      src="https://s.t13.cl/sites/default/files/styles/manualcrop_850x475/public/t13/field-imagen/2018-10/1539974202-portadahp2jpg.jpg.jpeg?itok=Flb0COEn" 
+    />
+    <ion-card-header>
+      <ion-button (click)="irAListaPersonajes()">
+        Ver Lista de Personajes
+      </ion-button>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card class="tamano">
+    <img 
+      alt="Lista de hechizos" 
+      src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2016/11/204876-hechizos-harry-potter-llegan-asistente-google.jpg?tf=3840x" 
+    />
+    <ion-card-header>
+      <ion-button (click)="irAListaHechizos()">
+        Ver Lista de Hechizos
+      </ion-button>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card class="tamano">
+    <img 
+      alt="Lista de Libros" 
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7gi9z9UNMGpNdMFl100dDKw7O0fQlpgN2gnLBuWwKh-IEXq1go35Csh9rKYCZjH122OM&usqp=CAU" 
+    />
+    <ion-card-header>
+      <ion-button (click)="irAListaLibros()">
+        Ver Lista de Libros
+      </ion-button>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card class="tamano">
+    <img 
+      alt="Lista de Películas" 
+      src="https://cloudfront-eu-central-1.images.arcpublishing.com/prisaradiolos40/AFJZ7EPXCRJ7DBZ56KVRGQIDB4.jpg" 
+    />
+    <ion-card-header>
+      <ion-button (click)="irAListaPeliculas()">
+        Ver Lista de Películas
+      </ion-button>
+    </ion-card-header>
+  </ion-card>
   
-  
-  <ion-card class="tamano">
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-    <ion-card-header>
-      <ion-button (click)="personajes()">Personajes</ion-button>
-    </ion-card-header>
-  </ion-card>
+
+
 
   <ion-card class="tamano">
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-    <ion-card-header>
-      <ion-card-title>Hechizos</ion-card-title>
-    </ion-card-header>
-  </ion-card>
-
-  <ion-card class="tamano">
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-    <ion-card-header>
-      <ion-card-title>Lugares</ion-card-title>
-    </ion-card-header>
-  </ion-card>
-
-  <ion-card class="tamano">
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-    <ion-card-header>
-      <ion-card-title>Bestias</ion-card-title>
-    </ion-card-header>
-  </ion-card>
-
-  <ion-card class="tamano">
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-    <ion-card-header>
-      <ion-card-title>Libros</ion-card-title>
-    </ion-card-header>
-  </ion-card>
-
-  <ion-card class="tamano">
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-    <ion-card-header>
-      <ion-card-title>Peliculas</ion-card-title>
-    </ion-card-header>
-  </ion-card>
-
-  <ion-card class="tamano">
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    <img alt="Silhouette of mountains" src="https://graziamagazine.com/mx/wp-content/uploads/sites/13/2021/05/176012652_142948484451736_88856622232199238_n.jpg" />
     <ion-card-header>
       <ion-button (click)="tienda()">Tienda</ion-button>
     </ion-card-header>

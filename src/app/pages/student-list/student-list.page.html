@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="degradado">
+    <ion-buttons slot="start">
+      <ion-menu-button >⚯ ͛</ion-menu-button>
+    </ion-buttons>
+    <ion-title slot="start">ESTUDIANTES </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-spinner *ngIf="isLoading" name="crescent"></ion-spinner>
+
+  <ion-list *ngIf="!isLoading">
+    <ion-item *ngFor="let student of students">
+      <ion-thumbnail slot="start" *ngIf="student.image">
+        <img [src]="student.image" [alt]="student.name">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ student.name }}</h2>
+        <p>Casa: {{ student.house || 'No especificada' }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="!isLoading && students.length === 0">
+    <p>No hay estudiantes disponibles.</p>
+  </div>
+</ion-content>

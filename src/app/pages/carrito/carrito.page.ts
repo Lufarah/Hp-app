@@ -1,21 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
+
+interface Product {
+  name: string;
+  price: number;
+}
 
 @Component({
   selector: 'app-carrito',
   templateUrl: './carrito.page.html',
   styleUrls: ['./carrito.page.scss'],
 })
-export class CarritoPage implements OnInit {
+export class CarritoPage {
+  items: Product[] = [];
 
-  constructor(private router: Router) { }
-
-  ngOnInit() {
+  constructor(private cartService: CartService) {
+    this.items = this.cartService.getItems();
   }
 
+  removeItem(index: number) {
+    this.cartService.removeItem(index);
+  }
 
-  carrito() {
-
-    this.router.navigate(['carrito']);
+  clearCart() {
+    this.items = this.cartService.clearCart();
   }
 }

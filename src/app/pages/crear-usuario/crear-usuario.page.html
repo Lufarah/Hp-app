@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="degradado">
+    <ion-icon name="earth-outline" style="font-size: 50px;" slot="start"></ion-icon>
+    <ion-title>HP WORLD</ion-title>
+    <ion-back-button slot="start" defaulttHref="/"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" >
+  <ion-item >
+    <ion-input [(ngModel)]="mdl_usuario"  label="Usuario" labelPlacement="floating" placeholder="Ingrese su usuario"></ion-input>
+  </ion-item>
+
+  <ion-item >
+    <ion-input [(ngModel)]="mdl_contrasena"  label="Contraseña" labelPlacement="floating" placeholder="Ingrese su contraseña"></ion-input>
+  </ion-item>
+
+  <ion-item >
+    <ion-input [(ngModel)]="mdl_correo"  label="Correo" labelPlacement="floating" placeholder="Ingrese su Correo"></ion-input>
+  </ion-item>
+
+  <ion-item >
+    <ion-input [(ngModel)]="mdl_nombre"  label="Nombre" labelPlacement="floating" placeholder="Ingrese su Nombre"></ion-input>
+  </ion-item>
+
+  <ion-item >
+    <ion-input [(ngModel)]="mdl_apellido"  label="Apellido" labelPlacement="floating" placeholder="Ingrese su Apellido"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="almacenarUsuario()" class="degradado" expand="block"> Registrar </ion-button>
+</ion-content>
