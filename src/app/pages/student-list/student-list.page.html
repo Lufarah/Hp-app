@@ -5,9 +5,25 @@
     </ion-buttons>
     <ion-title slot="start">ESTUDIANTES </ion-title>
   </ion-toolbar>
+
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/">Inicio</ion-button>
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+      <ion-button routerLink="/estudiantes" color="primary">Estudiantes</ion-button>
+    </ion-buttons>
+    <ion-chip>
+      <ion-avatar>
+        <img alt="Silhouette of a person's head" src="https://masterbundles.com/wp-content/uploads/edd/2023/03/harry-potter-clipart-free-example-image-143-300x300.png" />
+      </ion-avatar>
+      <ion-label>Estudiantes</ion-label>
+      <ion-icon name="close-circle"></ion-icon>
+    </ion-chip>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
   <ion-spinner *ngIf="isLoading" name="crescent"></ion-spinner>
 
   <ion-list *ngIf="!isLoading">
